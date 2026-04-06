@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Compare</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h2>Upload Two Files</h2>
+<div class="container">
+<br>
+<br>
+<form id="uploadForm">
+    File 1: <input type="file" name="file1"><br><br>
+    File 2: <input type="file" name="file2"><br><br>
+    <button type="submit">Compare</button>
+</form>
+</div>
+<br>
+<br>
+<div class="result"> <p id="result"></p></div>
+
+<script>
+    document.getElementById("uploadForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        let formData = new FormData(this);
+
+        let response = await fetch("/compare", {
+            method: "POST",
+            body: formData
+        });
+
+        let text = await response.text();
+        document.getElementById("result").innerText = text;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #d9e2ec);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-around;*/
+    align-items: center;
+    gap: 1vh;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    top: 17vh;
+    background: #ffffff;
+    width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    margin-top: 7vh;
+    margin-bottom: 20px;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+/* File input */
+input[type="file"] {
+    margin: 15px 0;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    width: 100%;
+}
+
+/* Button */
+button {
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Result box */
+#result {
+
+    margin-top: 25px;
+    white-space: pre-wrap;
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    width: 420px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+    border: 1px solid #e5e7eb;
+}
+
+.result{
+    background-color: transparent;
+    justify-self: center;
+    position: relative;
+    top: 52vh;
+    justify-content: center;
+}
